@@ -1,0 +1,30 @@
+{
+  "name": "@jsmrcaga/monitor",
+  "preferGlobal": true,
+  "version": "0.0.1",
+  "description": "A simple server monitor app, filled with nice stuff",
+  "main": "app.js",
+  "bin": {
+    "monitor": "bootstrap.js"
+  },
+  "scripts": {
+    "test": "mocha test",
+    "start": "node bootstrap.js",
+    "forever": "forever -o ./logs -e ./error-logs bootstrap.js",
+    "build": "echo \"No build needed yet\""
+  },
+  "author": "Jo Colina <jo@jocolina.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "fishingrod": "^4.0.0",
+    "mustache-express": "^1.2.8",
+    "redfox": "^0.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
