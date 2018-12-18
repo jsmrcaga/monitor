@@ -76,7 +76,9 @@ perfs.ram = () => {
 perfs.cpu = () => {
 	let ret = {
 		cpus: os.cpus(),
-		global: {}
+		global: {
+			times: {}
+		}
 	};
 
 	for(let cpu of ret.cpus) {
@@ -85,13 +87,13 @@ perfs.cpu = () => {
 		let percentage = idle / total;
 
 		for(let k in cpu.times) {
-			ret.global[k] = ret.global[k] ? (ret.global[k] + cpu.times[k]) : cpu.times[k];
+			ret.global.times[k] = ret.global[k] ? (ret.global[k] + cpu.times[k]) : cpu.times[k];
 		}
 
 		cpu.usage = 1 - percentage;
 	}
 
-	let { user, nice, idle, sys, irq } = ret.global;
+	let { user, nice, idle, sys, irq } = ret.global.times;
 	let globalTotal = user + nice + idle + sys + irq;
 	ret.global.usage = 1 - (idle / globalTotal);
 

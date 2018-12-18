@@ -1,7 +1,7 @@
 {
   "name": "@jsmrcaga/monitor",
   "preferGlobal": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple server monitor app, filled with nice stuff",
   "main": "app.js",
   "bin": {
@@ -11,7 +11,7 @@
     "test": "mocha test",
     "start": "node bootstrap.js",
     "forever": "forever -o ./logs -e ./error-logs bootstrap.js",
-    "build": "echo \"No build needed yet\""
+    "build": "webpack -p"
   },
   "author": "Jo Colina <jo@jocolina.com>",
   "license": "MIT",
@@ -25,6 +25,8 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   }
 }

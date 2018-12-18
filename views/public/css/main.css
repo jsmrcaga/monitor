@@ -1,0 +1,100 @@
+html, body {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: 'Google Sans', 'Product Sans';
+}
+
+body {
+	background-color: #1f1e1e;
+	color: #FFF;
+}
+
+.row {
+	margin-bottom: 15px;
+}
+
+.card {
+	box-sizing: border-box;
+	box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.1);
+	padding: 10px 15px;
+}
+
+.card .content {
+	padding: 5px;
+}
+
+.card .title {
+	padding: 10px 5px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#global_cpu .card .title {
+	font-size: 2em;
+}
+
+#ram .card .title {
+	font-size: 1.2em;
+}
+
+.panel {
+	box-sizing: border-box;
+	width: 50%;
+	height: 100%;
+	padding: 15px;
+}
+
+.panel.right {
+	float: right;
+}
+
+.panel.left {
+	float: left;
+}
+
+.disk-container {
+	height: 40px;
+	width: 100%;
+	box-sizing: border-box;
+	background-color: rgb(149, 224, 108);
+}
+
+.disk-progress {
+	height: 100%;
+	background-color: rgb(255, 89, 100);
+}
+
+.disk-title {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.server-title {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #fff;
+}
+
+.server-info {
+	color: #686868;
+	font-size: 2em;
+}
+
+.server-info span {
+	color: #FFFFFF;
+}
+
+@media only screen and (max-width: 900px) {
+	.panel {
+		width: 100%;
+	}
+
+	.panel .left, .panel .right {
+		width: 100%;
+		float: none;
+	}
+
+	.server-info {
+		font-size: 1.6em;
+	}
+}

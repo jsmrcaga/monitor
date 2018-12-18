@@ -1,2 +1,5 @@
 node_modules/
 .monitor.json
+
+views/public/js/monitor.js
+views/public/js/config.js
