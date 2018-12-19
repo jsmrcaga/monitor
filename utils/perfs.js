@@ -57,7 +57,8 @@ perfs.ram = () => {
 	// for now only mem, no swap
 	let [, total, used, free, shared, buffer, available] = mem.split(' ').filter(m => m);
 	
-	let usage = (used + free + shared + buffer + available) / total;
+	let usage = used / total;
+	let system_usage = (used + buffer) / total;
 
 	return Promise.resolve({
 		total,
@@ -66,7 +67,8 @@ perfs.ram = () => {
 		shared,
 		buffer,
 		available,
-		usage
+		usage,
+		system_usage
 	});
 };
 

@@ -1,0 +1,7 @@
+# Node modules
+node_modules/
+
+# All JS compiles filez
+views/public/js
+!views/public/js/monitor.js
+
