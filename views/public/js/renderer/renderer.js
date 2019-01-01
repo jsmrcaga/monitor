@@ -13,7 +13,9 @@ class Renderer {
 
 		document.querySelector('.uptime').reset(c('div', ['Uptime: ', c('span', [`${uptime / 1000} seconds`])]));
 
-		document.querySelector('#ips').reset(c('div', ['External IP: ', c('span', [ip.external.address])]));
+		let ips = document.querySelector('#ips');
+		ips.reset(c('div', ['External IP: ', c('span', [ip.external.address])]));
+		ips.appendChild(c('div', ['Internal IP: ', c('span', [ip.ipv4.address])]));
 
 		document.querySelector('.dev-stats').reset([
 			c('div', ['Platform: ', c('span', [info.platform])]),
